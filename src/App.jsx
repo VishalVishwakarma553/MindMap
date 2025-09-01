@@ -156,9 +156,9 @@ function App() {
     setIsPaused(!isPaused);
   };
   return (
-    <div className={"z-10 min-h-screen w-full bg-gradient-to-br from-slate-900 via-cyan-900 to-emerald-900 flex justify-center items-center"}>
+    <div className={"p-2 z-10 min-h-screen w-full bg-gradient-to-br from-slate-900 via-cyan-900 to-emerald-900 flex justify-center items-center"}>
       <div className={`w-full max-w-4xl rounded-2xl shadow-2xl bg-white/5 border border-white/10 p-4 md:p-6 ${isGameCompleted ? "blur-3xl": ""}`}>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center flex-wrap sm:flex-nowrap">
           {/* Logo */}
           <div className="flex items-start gap-3">
             <div className="p-3 bg-white/10 rounded-xl text-green-400">
@@ -174,7 +174,7 @@ function App() {
             </div>
           </div>
           {/* Game Details */}
-          <div className="flex gap-3">
+          <div className="flex gap-3 w-full justify-between sm:justify-end">
             {/* Input */}
             <input
               type="text"
@@ -182,7 +182,7 @@ function App() {
               className="max-w-[150px] bg-transparent outline-none text-xl text-white/94"
               onChange={(e) => setUserName(e.target.value)}
             />
-            <div className="p-3 rounded-xl bg-white/10 border border-white/10 shadow-xl text-center">
+            <div className="p-2 sm:p-3 rounded-xl bg-white/10 border border-white/10 shadow-xl text-center">
               <h3 className="text-sm font-semibold text-gray-400">
                 High Score
               </h3>
@@ -191,18 +191,18 @@ function App() {
           </div>
         </div>
         {/* Button to play and pause */}
-        <div className="flex gap-3 justify-between my-4">
-          <div className="flex gap-3">
-            <div className="p-3 rounded-xl bg-white/10 border border-white/10 shadow-xl text-center">
+        <div className="flex gap-3 justify-between my-4 flex-wrap md:flex-nowrap items-center">
+          <div className="w-full flex gap-3 justify-between sm:justify-start">
+            <div className="p-2 sm:p-3 rounded-xl bg-white/10 border border-white/10 shadow-xl text-center">
               <h3 className="text-sm font-semibold text-gray-400">Moves</h3>
               <p className="text-lg font-semibold text-gray-200">{moves}</p>
             </div>
-            <div className="p-3 rounded-xl bg-white/10 border border-white/10 shadow-xl text-center">
+            <div className="p-2 sm:p-3 rounded-xl bg-white/10 border border-white/10 shadow-xl text-center">
               <h3 className="text-sm font-semibold text-gray-400">Time</h3>
               <p className="text-lg font-semibold text-gray-200">{timer} s</p>
             </div>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 w-full justify-between sm:justify-end">
             <button
               onClick={() => startGame()}
               className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-xl font-bold transition-all duration-300 text-white/70 hover:scale-105 shadow-lg cursor-pointer"
