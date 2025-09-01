@@ -8,15 +8,17 @@ Before you begin, make sure you have **Node.js**, **npm** is installed
 ```bash
     git clone https://github.com/VishalVishwakarma553/MindMap.git
     cd MindMap
-    ```
+```
+
 2. **Install Dependencies**
 ```bash
     npm install
-    ```
+```
+
 3. **Start the dev server**
 ```bash
     npm run dev
-    ```
+```
 
 
 ## Controls
